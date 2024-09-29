@@ -4,10 +4,11 @@ import Template from "./components/template";
 import { useState } from "react";
 export default function DashboardPage() {
   const [searchInput, setSearchInput] = useState<string>("");
+  console.log(searchInput);
   return (
     <div className="">
       <SearchBar onSearchInput={setSearchInput} />
-      <Template />
+      <Template searchInput={searchInput} />
     </div>
   );
 }

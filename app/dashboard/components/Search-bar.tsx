@@ -1,3 +1,4 @@
+"use client";
 import { Auth } from "@/app/components/Auth";
 import { SearchIcon } from "lucide-react";
 
