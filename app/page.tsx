@@ -1,7 +1,14 @@
 import { Rocket, Zap, Shield, Send } from "lucide-react";
 import Link from "next/link";
+import { auth } from "@clerk/nextjs/server";
+import { Auth } from "./components/Auth";
+import { redirect } from "next/navigation";
 
 export default function LandingPage() {
+  const { userId } = auth();
+  if (userId) {
+    return redirect("/dashboard");
+  }
   return (
     <div className="flex flex-col min-h-screen items-center justify-center space-y-4">
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between space-x-4 w-full">
@@ -9,7 +16,7 @@ export default function LandingPage() {
           <Rocket className="h-6 w-6 mr-2" />
           <span className="font-bold">StartupX</span>
         </Link>
-        <nav className="flex gap-2 sm:gap-6 space-x-1       ">
+        <nav className="flex gap-2 sm:gap-6 space-x-1">
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#"
@@ -21,7 +28,7 @@ export default function LandingPage() {
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#"
           >
-            Auth
+            <Auth />
           </Link>
         </nav>
       </header>
@@ -29,7 +36,7 @@ export default function LandingPage() {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <div className=" justify-center space-y-2">
+              <div className="justify-center space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Welcome to StartupX -Your Ultimate AI Content Generator
                 </h1>
