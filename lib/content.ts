@@ -16,7 +16,7 @@ export const content = [
     slug: "youtube-video-description",
     form: [
       {
-        label: "Youtube video description title",
+        title: "Youtube video description title",
         field: "input",
         name: "jake",
         required: true,
@@ -38,7 +38,7 @@ export const content = [
     slug: "generate-instagram-hashtags",
     form: [
       {
-        label: "Enter Your Post niche",
+        title: "Enter Your Post niche",
         field: "input",
         name: "jake",
         required: true,
@@ -60,7 +60,7 @@ export const content = [
     slug: "generate-tiktok-hashtags",
     form: [
       {
-        label: "Enter Your Post niche",
+        title: "Enter Your Post niche",
         field: "input",
         name: "jake",
         required: true,
@@ -82,7 +82,7 @@ export const content = [
     slug: "generate-linkedin-post",
     form: [
       {
-        label: "Enter Your Post niche",
+        title: "Enter Your Post niche",
         field: "input",
         name: "jake",
         required: true,
@@ -105,7 +105,7 @@ export const content = [
     slug: "generate-tweet",
     form: [
       {
-        label: "Enter Your Post niche",
+        title: "Enter Your Post niche",
         field: "input",
         name: "jake",
         required: true,
