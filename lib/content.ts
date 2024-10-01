@@ -5,10 +5,10 @@ import {
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
-
 export const content = [
   {
     name: "Youtube Video Description",
+    catogory: "Youtube",
     icon: FaYoutube,
     des: "An AI tool that generates Youtube video description based on the title of the video.",
     aiPrompt:
@@ -96,10 +96,10 @@ export const content = [
     ],
   },
   {
-    name: "Tweet",
+    name: "Twitter",
     des: "An AI tool that generates Tweet based on your given description.",
     icon: FaTwitter,
-    catogory: "LinkedIn",
+    catogory: "Twitter",
     aiPrompt:
       "Give me 280 characters of tweet example based on given description and outline the topic",
     slug: "generate-tweet",

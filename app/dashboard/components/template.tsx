@@ -4,8 +4,24 @@ import Link from "next/link";
 // React
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 export default function Template({ searchInput }: { searchInput: string }) {
   const [template, setTemplate] = useState(content);
+  const searchParam = useSearchParams();
+  const categoryInput = searchParam.get("category");
+  console.log("searchInput  :", categoryInput);
+
+  useEffect(() => {
+    if (categoryInput === "All") {
+      setTemplate(content);
+    } else if (categoryInput) {
+      const filteredTemplate = content.filter(
+        (item) => item.catogory === categoryInput
+      );
+      setTemplate(filteredTemplate);
+    }
+  }, [categoryInput]);
+
   useEffect(() => {
     if (searchInput && searchInput.length > 2) {
       const filteredTemplate = content.filter((item) =>
