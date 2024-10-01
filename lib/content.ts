@@ -12,41 +12,42 @@ export const content = [
     icon: FaYoutube,
     des: "An AI tool that generates Youtube video description based on the title of the video.",
     aiPrompt:
-      "Give me a youtube video description based on given video description",
+      "Give me a youtube video description based on given title and  video description",
     slug: "youtube-video-description",
     form: [
       {
         title: "Youtube video description title",
         field: "input",
-        name: "jake",
+        name: "title",
         required: true,
       },
       {
         label: "Enter Youtube video description",
         field: "textarea",
-        name: "outline",
+        name: "description",
         required: true,
       },
     ],
   },
   {
     name: "Instagram Hashtags",
-    des: "An AI tool that generates Instagram hashtags based on your post.",
+    des: "An AI tool that generates Instagram hashtags based on given post.",
     icon: FaInstagram,
     catogory: "Instagram",
-    aiPrompt: "Give me some good Instagram hashtags based on given post",
+    aiPrompt:
+      "Give me some good Instagram hashtags based on given title and description",
     slug: "generate-instagram-hashtags",
     form: [
       {
         title: "Enter Your Post niche",
         field: "input",
-        name: "jake",
+        name: "title",
         required: true,
       },
       {
         label: "Enter Post Outline",
         field: "textarea",
-        name: "outline",
+        name: "description",
         required: true,
       },
     ],
@@ -56,19 +57,20 @@ export const content = [
     des: "An AI tool that generates Tiktok Topic based on your post.",
     catogory: "Tiktok",
     icon: FaTiktok,
-    aiPrompt: "Give me some good Tiktok hashtags based on given post",
+    aiPrompt:
+      "Give me some good Tiktok hashtags based on given title and description",
     slug: "generate-tiktok-hashtags",
     form: [
       {
         title: "Enter Your Post niche",
         field: "input",
-        name: "jake",
+        name: "title",
         required: true,
       },
       {
         label: "Enter Post Outline",
         field: "textarea",
-        name: "outline",
+        name: "description",
         required: true,
       },
     ],
@@ -84,13 +86,13 @@ export const content = [
       {
         title: "Enter Your Post niche",
         field: "input",
-        name: "jake",
+        name: "title",
         required: true,
       },
       {
         label: "Enter Post Outline",
         field: "textarea",
-        name: "outline",
+        name: "description",
         required: true,
       },
     ],
@@ -107,13 +109,13 @@ export const content = [
       {
         title: "Enter Your Post niche",
         field: "input",
-        name: "jake",
+        name: "title",
         required: true,
       },
       {
         label: "Enter Post Outline",
         field: "textarea",
-        name: "outline",
+        name: "description",
         required: true,
       },
     ],

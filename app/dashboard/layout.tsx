@@ -8,7 +8,7 @@ export default function DashboardLayout({
       <div className="md:w-64  hidden md:block fixed">
         <Sidebar />
       </div>
-      <div className="md:ml-64 bg-slate-100 h-fit ">{children}</div>
+      <div className="md:ml-64 bg-slate-50 h-fit">{children}</div>
     </div>
   );
 }
