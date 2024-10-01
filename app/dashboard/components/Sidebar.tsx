@@ -7,7 +7,7 @@ export default function Sidebar() {
   console.log(path);
   const menulist = [
     {
-      name: "Magic tools",
+      name: "Dashboard",
       icon: WandSparkles,
       path: "/dashboard",
     },

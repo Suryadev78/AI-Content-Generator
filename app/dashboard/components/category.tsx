@@ -1,14 +1,18 @@
+import Categoryitem from "./Categoryitem";
+
 export interface Category {
   name: string;
   value: string;
 }
 export default function CategoryComponent({ item }: { item: Category[] }) {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex gap-3 justify-center items-center">
       {item.map((item) => (
-        <div key={item.value} className="mr-4">
-          {item.name}
-        </div>
+        <Categoryitem
+          name={item.name}
+          value={item.value}
+          key={item.value}
+        ></Categoryitem>
       ))}
     </div>
   );
