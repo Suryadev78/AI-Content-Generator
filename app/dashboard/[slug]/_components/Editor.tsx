@@ -7,5 +7,5 @@ export default function Editor({ value }: { value: string }) {
     () => dynamic(() => import("react-quill"), { ssr: false }),
     []
   );
-  return <Quill value={value} className="h-[350px] w-full mt-3 " />;
+  return <Quill value={value} className="h-[300px] w-full mt-3 " />;
 }

@@ -58,7 +58,7 @@ export const content = [
     catogory: "Tiktok",
     icon: FaTiktok,
     aiPrompt:
-      "Give me some good Tiktok hashtags based on given title and description",
+      "Give me some good Tiktok hashtags or answer the questions based on given title and description",
     slug: "generate-tiktok-hashtags",
     form: [
       {

@@ -22,9 +22,14 @@ export default function Categoryitem({ name, value }: Category) {
     router.push(url);
     console.log(url);
   }
+
   return (
-    <div>
-      <Button onClick={handleOnclick} key={value}>
+    <div className="hidden md:block  flex-wrap justify-center md:justify-start">
+      <Button
+        onClick={handleOnclick}
+        key={value}
+        className="mb-2 md:mb-0 md:mr-2"
+      >
         {name}
       </Button>
     </div>

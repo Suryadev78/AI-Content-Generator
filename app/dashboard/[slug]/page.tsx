@@ -5,10 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { content } from "@/lib/content";
 import { Loader } from "lucide-react";
+import axios from "axios";
 import { useState, FormEvent } from "react";
 import Editor from "./_components/Editor";
 import { chatSession } from "@/lib/gemini-ai";
-import { title } from "process";
 
 const TemplatePage = ({ params }: { params: { slug: string } }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,16 +30,21 @@ const TemplatePage = ({ params }: { params: { slug: string } }) => {
     setIsLoading(true);
 
     try {
-      let dataSet = {
+      const dataSet = {
         title: formData.get("title"),
         description: formData.get("description"),
       };
 
-      let SelectedPrompt = selectedTemplate?.aiPrompt;
+      const SelectedPrompt = selectedTemplate?.aiPrompt;
       const Aiprompt = JSON.stringify(dataSet) + "," + SelectedPrompt;
 
       const result = await chatSession.sendMessage(Aiprompt);
       setAiOutput(result.response.text());
+      const response = axios.post("/api/", {
+        title: dataSet.title,
+        description: result.response.text(),
+        templateUsed: selectedTemplate?.name,
+      });
     } catch (error) {
       console.error("Error generating AI content:", error);
       setAiOutput("An error occurred while generating content.");
