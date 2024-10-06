@@ -89,20 +89,6 @@ export default function LandingPage() {
                   to the next level.
                 </p>
               </div>
-              <div className="w-full max-w-sm space-y-2 mx-auto">
-                <form className="flex space-x-2">
-                  <input
-                    className="max-w-lg flex-1"
-                    placeholder="Enter your email"
-                    type="email"
-                  />
-                  <button type="submit">Subscribe</button>
-                </form>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  By subscribing, you agree to our Terms of Service and Privacy
-                  Policy.
-                </p>
-              </div>
             </div>
           </div>
         </section>
