@@ -47,7 +47,7 @@ export default function SearchBar({
           />
         </div>
         <div className="mx-4 bg-white px-1 rounded-lg flex justify-center mt-4 md:mt-0">
-          <CategoryComponent item={categories} />
+          <CategoryComponent  item={categories} />
         </div>
         <div className="flex items-center mt-4 md:mt-0">
           <Auth />

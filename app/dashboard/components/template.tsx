@@ -23,7 +23,7 @@ export default function Template({ searchInput }: { searchInput: string }) {
   }, [categoryInput]);
 
   useEffect(() => {
-    if (searchInput && searchInput.length > 2) {
+    if (searchInput && searchInput.length > 1) {
       const filteredTemplate = content.filter((item) =>
         item.name.toLowerCase().includes(searchInput.toLowerCase())
       );

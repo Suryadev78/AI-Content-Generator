@@ -62,10 +62,7 @@ export default function LandingPage() {
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <Shield className="w-12 h-12 text-green-500" />
                 <h3 className="text-xl font-bold">Secure</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                  Your data is protected with state-of-the-art security
-                  measures.
-                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 text-center"></p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <Send className="w-12 h-12 text-blue-500" />
